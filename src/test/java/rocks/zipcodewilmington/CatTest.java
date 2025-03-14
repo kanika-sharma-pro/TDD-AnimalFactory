@@ -17,6 +17,8 @@ public class CatTest {
     // TODO - Create tests for `Integer getId()`
     // TODO - Create test to check Animal inheritance; google search `java instanceof keyword`
     // TODO - Create test to check Mammal inheritance; google search `java instanceof keyword`
+private String expected;
+private Integer Id;
 
 
     @Test
@@ -39,5 +41,70 @@ public class CatTest {
         Assert.assertEquals(givenBirthDate, retrievedBirthDate);
         Assert.assertEquals(givenId, retrievedId);
     }
+
+
+    @Test
+    public void setName() {
+        //given
+        String givenCatName = "nancy";
+
+// constructor
+        Cat cat = new Cat ("nancy",null,null);
+        //when
+        String GetCatName = cat.getName();
+
+        //then
+        Assert.assertEquals(givenCatName, GetCatName);
+
+
+
+    }
+    @Test
+    public void CatId() {
+        //given
+        Integer givenID = 25;
+        //constructor
+       Cat cat = new Cat(null, null , 25);
+       //when
+        Integer expected = 25;
+        Integer Id = cat.getId();
+        //then
+        Assert.assertEquals(givenID,Id);
+
+
+
+    }
+
+    @Test
+    public void CatSpeak() {
+        //given
+        String givenSpeak = "meow!";
+        //constructor
+        Cat cat = new Cat (null,null,null);
+        //when
+String expected = "meow!";
+String Speak = cat.speak();
+//then
+        Assert.assertEquals(givenSpeak, Speak);
+
+    }
+
+    @Test
+    public void setBirthDate() {
+        //given
+        Date givenBirthDate = new Date();
+
+// constructor
+        Cat cat = new Cat (null,29/07/1989,null);
+        //when
+        String GetCatName = cat.getName();
+
+        //then
+        Assert.assertEquals();
+
+
+
+
+
 
 }
