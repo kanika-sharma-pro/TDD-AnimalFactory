@@ -4,14 +4,21 @@ import java.util.Date;
 
 public class Cat {
     private String catName;
-    private Date birthDate;
+    Date birthDate;
  private Integer ID;
  private String catSpeak;
+
+    public String Inheritance;
+
+    public String animal;
+
     public Cat(String catName, Date birthDate, Integer ID, String catSpeak) {
         this.catName = catName;
         this.birthDate = birthDate;
         this.ID = ID;
         this.catSpeak = catSpeak;
+        this.Inheritance = Inheritance;
+        this.animal = animal;
 
     }
 

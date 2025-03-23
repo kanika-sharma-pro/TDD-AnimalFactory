@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import rocks.zipcodewilmington.animals.Cat;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -17,8 +18,8 @@ public class CatTest {
     // TODO - Create tests for `Integer getId()`
     // TODO - Create test to check Animal inheritance; google search `java instanceof keyword`
     // TODO - Create test to check Mammal inheritance; google search `java instanceof keyword`
-private String expected;
-private Integer Id;
+    private String expected;
+    private Integer Id;
 
 
     @Test
@@ -49,7 +50,7 @@ private Integer Id;
         String givenCatName = "nancy";
 
 // constructor
-        Cat cat = new Cat ("nancy",null,null);
+        Cat cat = new Cat("nancy", null, null);
         //when
         String GetCatName = cat.getName();
 
@@ -57,20 +58,19 @@ private Integer Id;
         Assert.assertEquals(givenCatName, GetCatName);
 
 
-
     }
+
     @Test
     public void CatId() {
         //given
         Integer givenID = 25;
         //constructor
-       Cat cat = new Cat(null, null , 25);
-       //when
+        Cat cat = new Cat(null, null, 25);
+        //when
         Integer expected = 25;
         Integer Id = cat.getId();
         //then
-        Assert.assertEquals(givenID,Id);
-
+        Assert.assertEquals(givenID, Id);
 
 
     }
@@ -80,10 +80,10 @@ private Integer Id;
         //given
         String givenSpeak = "meow!";
         //constructor
-        Cat cat = new Cat (null,null,null);
+        Cat cat = new Cat(null, null, null);
         //when
-String expected = "meow!";
-String Speak = cat.speak();
+        String expected = "meow!";
+        String Speak = cat.speak();
 //then
         Assert.assertEquals(givenSpeak, Speak);
 
@@ -92,19 +92,52 @@ String Speak = cat.speak();
     @Test
     public void setBirthDate() {
         //given
-        Date givenBirthDate = new Date();
+        Date givenBirthDate = new Date(1999, 06, 10);
 
 // constructor
-        Cat cat = new Cat (null,29/07/1989,null);
+        Cat cat = new Cat(null, givenBirthDate, null);
         //when
-        String GetCatName = cat.getName();
+        Date GetBirthDate = cat.getBirthDate();
 
         //then
-        Assert.assertEquals();
+        Assert.assertEquals(givenBirthDate, GetBirthDate);
 
+
+    }
+    @Test
+    public void CatInheritance() {
+        //given
+        String givenInheritance = "mammal";
+        //constructor
+        Cat cat = new Cat(null, null, null);
+        //when
+        String expected = "mammal";
+        String Inheritance = cat.Inheritance();
+//then
+        Assert.assertEquals(givenInheritance, Inheritance);
+
+    }
+
+    @Test
+    public void CatAnimal() {
+        //given
+        String givenAnimal = "animal";
+        //constructor
+        Cat cat = new Cat(null, null, null);
+        //when
+        String expected = "animal";
+        String Animal = cat.animal();
+//then
+        Assert.assertEquals(givenAnimal, Animal);
+
+    }
 
 
 
 
 
 }
+
+
+
+

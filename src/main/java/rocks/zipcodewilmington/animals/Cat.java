@@ -13,4 +13,12 @@ public class Cat extends Mammal {
     public String speak() {
         return "meow!";
     }
+
+    public String Inheritance() {
+    return null;
+    }
+
+    public String animal() {
+        return null;
+    }
 }
