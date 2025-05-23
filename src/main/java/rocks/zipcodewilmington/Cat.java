@@ -3,7 +3,7 @@ package rocks.zipcodewilmington;
 import java.util.Date;
 
 public class Cat {
-    private String catName;
+    private static String catName;
     Date birthDate;
  private Integer ID;
  private String catSpeak;
@@ -25,7 +25,7 @@ public class Cat {
     public Cat() {
     }
 
-    public String getCatName() {
+    public static String getCatName() {
         return catName;
     }
 

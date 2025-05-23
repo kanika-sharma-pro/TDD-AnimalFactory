@@ -24,8 +24,8 @@ public class AnimalFactoryTest {
     @Test
     public void testCreateCat() {
         Date birthDate = new Date();
-        Cat cat = AnimalFactory.createCat("Zula", birthDate);
-        Assert.assertEquals("Zula", Cat.getCatName());
+       Cat cat = AnimalFactory.createCat("Nancy", birthDate);
+       Assert.assertEquals("Nancy", cat.getCatName);
 
     }
 
